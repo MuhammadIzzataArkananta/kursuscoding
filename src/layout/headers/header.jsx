@@ -9,7 +9,7 @@ import React, {useState, useRef, useEffect, useLayoutEffect} from 'react';
 import NavMenu from './nav-menu';
 import Image from 'next/image';
 
-import logo from "../../../public/assets/img/logo/logo-black.png"
+import logo from "../../../public/assets/img/logo/marscoding-logo.webp"
 
 const Header = () => {
 
@@ -44,7 +44,7 @@ const Header = () => {
                      <div className="row align-items-start">
                         <div className="col-6">
                            <div className="header-top__link">
-                              <span>Offer <i>is going on till Friday, $2.99/mo. </i></span>
+                              <span>Promo <i>free trial bulan Agustus, $200/bulan.</i></span>
                               <Link href="#">
                                  <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.40918 9L5.591 5L1.40918 1" stroke="white" strokeWidth="1.5"
@@ -55,7 +55,7 @@ const Header = () => {
                         </div>
                         <div className="col-6">
                            <div className="header-top__support text-end">
-                              <span>Get Support: <Link href="tel:806(000)88899">+806 (000) 888 99</Link></span>
+                              <span>Bantuan: <Link href="tel:806(000)88899">+806 (000) 888 99</Link></span>
                            </div>
                         </div>
                      </div>
@@ -67,7 +67,7 @@ const Header = () => {
                   <div className="container">
                      <div className="row align-items-center">
                         <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
-                           <div className="header-bottom__logo">
+                           <div className="header-bottom__logo"  style={{width: "130px"}}>
                               <Link href="/"><Image  src={logo} alt="theme-pure" /></Link>
                            </div>
                         </div>

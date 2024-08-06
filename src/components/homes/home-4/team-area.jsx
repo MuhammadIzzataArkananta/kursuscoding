@@ -7,7 +7,7 @@ import React from 'react';
 
 const team_content = {
     sub_title: "THE TEAM",
-    title: "Our Leaders",
+    title: "Tim Kami",
     des: <>Our clients are the companies and startups who <br /> make the world go round,!</>,
 }
 const {sub_title, title, des}  = team_content
@@ -59,7 +59,7 @@ const TeamArea = ({bg_style}) => {
                            <div className="col-xl-6 col-lg-6 col-md-6">
                               <div className="tp-team-top-content text-center text-md-end">
                                  <Link className="tp-btn-inner tp-btn-hover alt-color-orange" href="/team-details">
-                                    <span>View All</span>
+                                    <span>Lihat Semua</span>
                                     <b></b>
                                  </Link>
                               </div>

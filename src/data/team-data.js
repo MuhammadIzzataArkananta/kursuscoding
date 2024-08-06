@@ -1,7 +1,7 @@
 
-import team_img_1 from  "../../public/assets/img/team/team-4-1.png"
-import team_img_2 from  "../../public/assets/img/team/team-4-2.png"
-import team_img_3 from  "../../public/assets/img/team/team-4-3.png"
+import team_img_1 from  "../../public/assets/img/team/willy-pp.webp"
+import team_img_2 from  "../../public/assets/img/team/siyun-pp.webp"
+import team_img_3 from  "../../public/assets/img/team/roihan-pp.webp"
 import team_img_4 from  "../../public/assets/img/team/team-4-4.png"
 import team_img_5 from  "../../public/assets/img/team/team-4-5.png"
 import team_img_6 from  "../../public/assets/img/team/team-4-6.png"
@@ -14,22 +14,22 @@ const team_data = [
         id: 1, 
         cls: 1,
         img: team_img_1,
-        name: "Alexa Montes",
-        job_title:  "Partner & COO",
+        name: "Willy Masrur",
+        job_title:  "Headmaster & Founder",
     },
     {
         id: 2, 
         cls: 2,
         img: team_img_2,
-        name: "Ravi Ganatra",
-        job_title:  "Designer",
+        name: "Raihan Siyun",
+        job_title:  "Coding Tutor",
     },
     {
         id: 3, 
         cls: 3,
         img: team_img_3,
-        name: "Imdat Cimsit",
-        job_title:  "CEO & Founder",
+        name: "Roihan Fatah",
+        job_title:  "Coding Tutor",
     },
     {
         id: 4, 

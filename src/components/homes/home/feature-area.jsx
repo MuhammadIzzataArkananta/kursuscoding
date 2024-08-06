@@ -16,27 +16,27 @@ const feature_data = [
    {
       id: 1,
       img: icon_1,
-      title: <>A Unified View of The Customer</>,
+      title: <>Tutor Kami Adalah Programmer Industri Profesional</>,
       delay: ".4s",
    },
    {
       id: 2,
       img: icon_2,
-      title: <>Industry Leading Procedures</>,
+      title: <>Metode Belajar Sambil Bermain Yang Menyenangkan</>,
       delay: ".6s",
    },
    {
       id: 3,
       img: icon_3,
-      title: <>Collaboration Across <br /> All Areas</>,
+      title: <>Terdapat Extra Class Yang Dapat Diakses di Luar Kelas Pembelajaran</>,
       delay: ".8s",
    },
 ]
 
 // feature content
 const feature_content = {
-   title: "Our Exciting Features",
-   sub_title: "More than 15,000 companies trust and choose Itech",
+   title: "Fitur Menarik Dari Mars Coding",
+   sub_title: "Lebih dari 10 Instansi Pendidikan percaya dan memilih Mars Coding",
 }
 const { title, sub_title } = feature_content
 

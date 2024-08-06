@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";  
+import React, { useEffect, useRef } from "react";
 //use gsap
 import { gsap } from "gsap";
 import useCharAnimation from "@/hooks/useCharAnimation";
@@ -34,11 +34,11 @@ const hero_content = {
 	hero_title: (
 		<>
 			<span className="tp_title">
-				<span className="child">The Leading Customer</span>
+				<span className="child">Kursus Coding</span>
 			</span>{" "}
 			<br />
 			<span>
-				<span className="child">Data Platform</span>
+				<span className="child">Anak Cerdas</span>
 			</span>{" "}
 		</>
 	),

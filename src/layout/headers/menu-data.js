@@ -3,7 +3,7 @@ const menu_data = [
     id: 1,
     mega_menu: false,
     has_dropdown: true,
-    title: "Home",
+    title: "Beranda",
     link: "/",
     active: "active",
     sub_menus: [
@@ -18,7 +18,7 @@ const menu_data = [
     id: 2,
     mega_menu: false,
     has_dropdown: true,
-    title: "Pages",
+    title: "Halaman",
     link: "/about",
     active: "",
     sub_menus: [
@@ -41,7 +41,7 @@ const menu_data = [
     id: 3,
     mega_menu: false,
     has_dropdown: true,
-    title: "Projects",
+    title: "Proyek",
     link: "/project",
     active: "",
     sub_menus: [
@@ -69,7 +69,7 @@ const menu_data = [
     id: 5,
     mega_menu: false,
     has_dropdown: false,
-    title: "Contact",
+    title: "Kontak",
     link: "/contact",
     active: "",
   },

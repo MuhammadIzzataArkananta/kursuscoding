@@ -7,8 +7,8 @@ import React, { useState } from 'react';
 import NavMenu from './nav-menu';
 
 
-import logo_black from "../../../public/assets/img/logo/logo-black.png";
-import logo_white from "../../../public/assets/img/logo/logo-white.png";
+import logo_black from "../../../public/assets/img/logo/marscoding-logo.webp";
+import logo_white from "../../../public/assets/img/logo/marscoding-logo.webp";
 
 
 const HeaderSix = ({ style_2 = false }) => {
@@ -22,7 +22,7 @@ const HeaderSix = ({ style_2 = false }) => {
                <div className="container">
                   <div className="row g-0 align-items-center">
                      <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
-                        <div className="header-bottom__logo">
+                        <div className="header-bottom__logo" style={{width: "130px"}}>
                            {style_2 ? <Link href="/">
                               <Image src={logo_black} alt="theme-pure" />
                            </Link> : <><Link className="white-logo" href="/">

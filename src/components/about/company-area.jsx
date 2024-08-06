@@ -2,11 +2,11 @@ import VideoPopup from '@/modals/video-popup';
 import React,{useState} from 'react';
 
 const company_content ={
-    sub_title:  "ABOUT THE COMPANY",
-    title: <>Softuch is Made <br />For the Creator.</>,
-    info_1: <>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum arcu sollicitudin viverra sit elit leo in. Vitae eu tellus mattis quis. Eu, tempus donec nam mauris egestas. Id aliquet ultricies ligula tellus arcu dolor. Massa arcu pulvinar in mattis</>,
-    info_2: <>Feugiat purus congue risus, blandit a sed. In aenean quam aenean purus dictum pellentesque consequat.!</>,
-    info_3: <>Our clean and simple APIs and transparent SaaS model will give you complete peace of mind.</>,
+   sub_title:  "TENTANG MARS CODING",
+   title: <>Mars Coding Dibuat untuk <br />Sang Pencipta.</>,
+   info_1: <>Mars Coding adalah kursus Coding Sidoarjo untuk anak yang dirancang khusus untuk menginspirasi dan mengembangkan kreativitas mereka. Di Mars Coding, kami percaya bahwa setiap anak adalah pencipta yang luar biasa.</>,
+   info_2: <>Dengan pendekatan yang menyenangkan dan mendidik, kami membantu anak-anak belajar koding sambil mengeksplorasi imajinasi mereka. Program kami dirancang untuk memfasilitasi pembelajaran yang interaktif dan menantang, sesuai dengan minat dan kemampuan setiap anak.</>,
+   info_3: <><i>"Setiap anak adalah seorang seniman. Masalahnya adalah bagaimana tetap menjadi seniman setelah kita dewasa." - Pablo Picasso</i></>,
 }
 const {sub_title, title, info_1, info_2, info_3}  = company_content
 
@@ -35,7 +35,7 @@ const CompanyArea = () => {
                         </div>
                      </div>
                   </div>
-                  <div className="row align-items-center">
+                  {/* <div className="row align-items-center">
                      <div className="col-xl-4">
                         <div className="ab-company-video">
                            <a className="popup-video" 
@@ -77,7 +77,7 @@ const CompanyArea = () => {
                            </div>
                         </div>
                      </div>
-                  </div>
+                  </div> */}
                </div>
             </div>
 

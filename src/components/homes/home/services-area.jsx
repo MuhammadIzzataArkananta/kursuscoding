@@ -8,8 +8,8 @@ import React, { useRef } from 'react';
 import img from "../../../../public/assets/img/service/sv-dashbord.png" 
 
 const service_content = {
-    title: "Explore Our Data Services",
-    sub_title: <>More than 15,000 companies trust and choose Itech</>,
+    title: "Jelajahi Kelas Mars Coding",
+    sub_title: <>Terdapat kelas offline, online, dan privat</>,
 
     bg_img: "/assets/img/service/sv-bg.jpg",
     title_2: <>Data Analysis <br /> Tools & Methods</>,

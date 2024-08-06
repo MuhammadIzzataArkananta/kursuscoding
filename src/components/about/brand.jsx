@@ -3,19 +3,20 @@ import React from 'react';
 
 
 // brand img import here 
-import brand_img_1 from "../../../public/assets/img/brand/brand-inner-1.png"
-import brand_img_2 from "../../../public/assets/img/brand/brand-inner-2.png"
-import brand_img_3 from "../../../public/assets/img/brand/brand-inner-3.png"
-import brand_img_4 from "../../../public/assets/img/brand/brand-inner-4.png"
-import brand_img_5 from "../../../public/assets/img/brand/brand-inner-5.png"
-import brand_img_6 from "../../../public/assets/img/brand/brand-inner-6.png"
-import brand_img_7 from "../../../public/assets/img/brand/brand-inner-7.png"
-import brand_img_8 from "../../../public/assets/img/brand/brand-inner-8.png"
-import brand_img_9 from "../../../public/assets/img/brand/brand-inner-9.png"
+import brand_img_1 from "../../../public/assets/img/brand/pj-logo.webp"
+import brand_img_2 from "../../../public/assets/img/brand/smenda-logo.webp"
+import brand_img_3 from "../../../public/assets/img/brand/musasi-logo.webp"
+import brand_img_4 from "../../../public/assets/img/brand/mbs-logo.webp"
+import brand_img_5 from "../../../public/assets/img/brand/antartika2-logo.webp"
+import brand_img_6 from "../../../public/assets/img/brand/alfatih-logo.webp"
+import brand_img_7 from "../../../public/assets/img/brand/bumiS-logo.webp"
+import brand_img_8 from "../../../public/assets/img/brand/sabil-logo.webp"
+import brand_img_9 from "../../../public/assets/img/brand/wachidH-logo.webp"
+import brand_img_10 from "../../../public/assets/img/brand/telkomSda-logo.webp"
 
 const brand_content = {
-    titel: "Trusted by Thousands Business",
-    description: <>More than 100,000+ teams are using Softuch</>,
+  titel: "Dipercaya oleh Instansi Pendidikan Ternama",
+  description: <>Lebih dari 10+ instansi pendidikan percaya dan memilih Mars Coding</>,
     
     brand_img: [
         {img: brand_img_1, delay: ".2s"},
@@ -27,6 +28,7 @@ const brand_content = {
         {img: brand_img_7, delay: "1.1s"},
         {img: brand_img_8, delay: "1.2s"},
         {img: brand_img_9, delay: "1.3s"},
+        {img: brand_img_10, delay: "1.4s"},
 
     ]
 }
@@ -58,7 +60,7 @@ const Brand = () => {
                         data-wow-delay={item.delay}
                       >
                         <div className="ab-brand-item mb-25">
-                          <Image src={item.img} alt="theme-pure" />
+                          <Image src={item.img} alt="theme-pure"  style={{maxHeight: "85px", minHeight: "85px", objectFit: "contain"}} />
                         </div>
                       </div>
                     ))}

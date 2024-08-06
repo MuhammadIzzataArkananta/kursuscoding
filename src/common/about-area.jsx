@@ -40,17 +40,16 @@ const about_data =[
 
 // about content
 const about_content = {
-    title: "OVER 150K+ CLIENT",
-    sub_title: "We Offer Real Time Data Solutions", 
-    des: <>Excepteur sint occaecat cupidatat officia non proident <br />
-    sunt in culpa qui deserunt.!</>,
+    title: "LEBIH DARI 100+ SISWA",
+    sub_title: "Kami Mencetak Profesional Untuk Kebutuhan Industri IT di Indonesia Hingga Dunia", 
+    des: <>Kami melatih profesional IT yang siap memenuhi kebutuhan industri di Indonesia dan dunia. Dengan pengajar berpengalaman dari industri, kami memastikan keterampilan praktis dan pengetahuan terbaru. Bergabunglah dan jadilah bagian dari tenaga kerja global yang kompeten.</>,
 
     about_list: [
         <>Various analysis options.</>,
         <>Page Load (time, size, number of requests).</>,
         <> Big data analysis.</>,
     ],
-    btn_text: "About Us",
+    btn_text: "Tentang Kami",
 
 }
 const {title, sub_title, des, about_list, btn_text}  = about_content
@@ -78,11 +77,12 @@ const AboutArea = () => {
                               <h3 className="tp-section-title mb-15">{sub_title}</h3>
                               <p>{des}</p>
                            </div>
-                           <div className="tp-about__list">
+                           {/*<div className="tp-about__list">
                               <ul>
                                 {about_list.map((item , i)  =>  <li key={i}><i className="fal fa-check"></i>{item}</li>)}
                               </ul>
                            </div>
+                           */}
                            <div className="tp-about__btn">
                               <Link className="tp-btn tp-btn-hover alt-color-black" href="/about">
                                  <span>{btn_text}</span>
