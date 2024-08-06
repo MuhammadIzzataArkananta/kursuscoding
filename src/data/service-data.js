@@ -7,10 +7,10 @@ import ServiceIconsix from "../svg/service/service-icon-6"
 import ServiceIconSeven from "../svg/service/service-icon-7"
 
 // images import  
-import img_1 from "../../public/assets/img/service/sv-icon-1.png";
-import img_2 from "../../public/assets/img/service/sv-icon-2.png";
-import img_3 from "../../public/assets/img/service/sv-icon-3.png";
-import img_4 from "../../public/assets/img/service/sv-icon-4.png";
+import img_1 from "../../public/assets/img/service/codeOrg-logo.webp";
+import img_2 from "../../public/assets/img/service/scratch-logo.webp";
+import img_3 from "../../public/assets/img/service/rbxStudio-logo.webp";
+import img_4 from "../../public/assets/img/service/programming.webp";
 import img_5 from "../../public/assets/img/service/sv-icon-5.png";
 // for home 04
 import icon_1 from "../../public/assets/img/service/sv-icon-4-1.png"
@@ -40,39 +40,39 @@ const  service_data = [
         id: 1,
         icon: img_1,
         img: img_1,
-        title: "AI Data Analysis",
-        description: <>Lorem Ipsum is simply dummy text <br /> of the printing</>,
+        title: "Block Intro",
+        description: <>Kelas pengantar untuk anak yang belajar dasar-dasar koding dengan platform interaktif</>,
         delay: ".4s",
     },
     {
         id: 2,
         icon: img_2,
         img: img_2,
-        title: "Machine Learning",
-        description: <>Lorem Ipsum is simply dummy text <br /> of the printing</>,
+        title: "Block Advance",
+        description: <>Kelas lanjutan untuk mengembangkan keterampilan koding anak melalui proyek kreatif.</>,
         delay: ".6s",
     },
     {
         id: 3,
         icon: img_3,
         img: img_3,
-        title: "Data Visualization",
-        description: <>Lorem Ipsum is simply dummy text <br /> of the printing</>,
+        title: "Junior Programmer",
+        description: <>Kelas pengantar untuk anak yang belajar pemrograman berorientasi industri</>,
         delay: ".7s",
     },
     {
         id: 4,
         icon: img_4,
         img: img_4,
-        title: "Business Intelligence",
-        description: <>Lorem Ipsum is simply dummy text <br /> of the printing</>,
+        title: "Advance Programmer",
+        description: <>Kelas lanjutan untuk anak yang belajar pemrograman berorientasi industri</>,
         delay: ".8s",
     },
     {
         id: 5,
         icon: img_5,
         img: img_5,
-        title: "Artificial Intelligence",
+        title: "Private & Visit Class",
         description: <>Lorem Ipsum is simply dummy text <br /> of the printing</>,
         delay: ".9s",
     },
