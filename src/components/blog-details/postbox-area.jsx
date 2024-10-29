@@ -3,12 +3,14 @@ import CommentPost from '@/forms/comment-post';
 import DoubleSemicolon from '@/svg/double-semicolon';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Categories from '../blog-list/categories';
 import RecentPost from '../blog-list/recent-post';
 import Search from '../blog-list/search';
 import Tags from '../blog-list/tags';
 import Comments from './comments';
+
+import fetchBlogs from '@/data/marscoding-blogs';
 
 
 import blog_details_img_1  from "../../../public/assets/img/blog/blog-details-1.jpg";
@@ -17,6 +19,8 @@ import blog_details_img_3  from "../../../public/assets/img/blog/blog-details-3.
 import navigation_img_1  from "../../../public/assets/img/blog/navigation-1.png";
 import navigation_img_2  from "../../../public/assets/img/blog/navigation-2.png";
 import blog_details_avata  from "../../../public/assets/img/blog/blog-details-avata-1.jpg";
+
+console.log(fetchBlogs());
 
 
 const post_box_content = {
@@ -41,6 +45,19 @@ const {title_1, des_1, des_2, checkmark_list, title_2, des_3, des_4, des_5, des_
 
 
 const PostboxArea = ({style_details_2}) => {
+
+   const [blogs, setBlogs] = useState([]);
+
+   useEffect(() => {
+      fetchBlogs().then((data) => {
+         if (data) {
+            setBlogs(data)
+         }
+      }).catch((error) => console.error("Error fetching blogs:", error))
+   }, [])
+
+   console.log("ini di file jsx" + blogs);
+
     return (
         <>
             <div className={`postbox__area ${style_details_2 && "pt-100"} pb-100`}>
@@ -48,18 +65,20 @@ const PostboxArea = ({style_details_2}) => {
                <div className="row">
                   <div className="col-xxl-8 col-xl-8 col-lg-8">
                      <div className="postbox__details-wrapper pr-20">
-                        <article>
+
+                        {blogs.map((blog, index) => (
+                           <article key={index}>
                            {style_details_2 && 
                               <div className="postbox__thumb w-img">
                                  <Link href="/blog-details">
-                                    <Image src={blog_details_img_1} alt="" />
+                                    <Image src={blog.acf.thumb_image} alt="" />
                                  </Link>
                               </div>
                            }
                            <div className="postbox__details-title-box pb-30">
-                              <h4 className="postbox__details-title">{title_1}</h4>
-                              <p>{des_1}</p>
-                              <p>{des_2}</p>
+                              <h4 className="postbox__details-title">{blog.acf.news_title}</h4>
+                              <p>{blog.acf.content}</p>
+                              <p>{blog.acf.content}</p>
                            </div>
                            <div className="postbox__details-checkmark">
                               <ul>
@@ -67,21 +86,21 @@ const PostboxArea = ({style_details_2}) => {
                               </ul>
                            </div>
                            <div className="postbox__details-title-box pb-30">
-                              <h4 className="postbox__details-title">{title_2}</h4>
-                              <p>{des_3}</p>
+                              <h4 className="postbox__details-title">{blog.acf.news_title}</h4>
+                              <p>{blog.acf.content}</p>
                            </div>
                            <div className="postbox__details-img-box d-flex">
-                              <div className="mr-20 text-center">
-                                 <Image className="mb-20" src={blog_details_img_2} alt="theme-pure" />
+                              <div className="mr-20 text-center" style={{position: 'relative', width: '100%', height: '200px'}}>
+                                 <Image className="mb-20" src={blog.acf.thumb_image} fill alt="theme-pure" />
                                  <h4 className="postbox__details-img-caption"><span>Images by</span>@sample</h4>
                               </div>
-                              <div className="text-center">
-                                 <Image className="mb-20" src={blog_details_img_3} alt="theme-pure" />
+                              <div className="text-center" style={{position: 'relative', width: '100%', height: '200px'}}>
+                                 <Image className="mb-20" src={blog.acf.thumb_image} fill alt="theme-pure" />
                                  <h5 className="postbox__details-img-caption"><span>Images by</span>@sample</h5>
                               </div>
                            </div>
                            <div className="postbox__details-title-box pb-15">
-                              <p>{des_4}</p>
+                              <p>{blog.acf.content}</p>
                            </div>
                            <div className="postbox__details-qoute mb-30">
                               <blockquote className="d-flex align-items-start">
@@ -160,6 +179,8 @@ const PostboxArea = ({style_details_2}) => {
                               <CommentPost /> 
                            </div>
                         </article>
+                        ))}
+                        
                      </div>
                   </div>
                   <div className="col-xxl-4 col-xl-4 col-lg-4">
