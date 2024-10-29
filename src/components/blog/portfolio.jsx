@@ -3,6 +3,9 @@ import portfolio_blog from '@/data/portfolio-blog';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, {useState} from 'react';
+import fetchBlogs from '@/data/marscoding-blogs';
+
+console.log(fetchBlogs);
  
 // data
 const categories = [
@@ -13,7 +16,7 @@ const categories = [
 const Portfolio = () => {
    const {dataRef} = useMultipleAnime();
    const [activeCategory, setActiveCategory] = useState("All");
-   const [items, setItems] = useState(portfolio_blog); 
+   const [items, setItems] = useState(fetchBlogs); 
   
     const filterItems = (cateItem) => {
       setActiveCategory(cateItem);
@@ -61,28 +64,28 @@ const Portfolio = () => {
                      {items.map((item, i ) => 
                         <div key={i} data-index={i} className="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat1 cat4 cat3 cat5">
                            <div className="tp-blog-item">
-                              <div className="tp-blog-thumb fix">
-                                 <Link href="/blog-details"><Image src={item.thumb_img} alt="theme-pure" /></Link>
+                              <div className="tp-blog-thumb fix" style={{position: 'relative', width:'100%', height: '250px'}}>
+                                 <Link href="/blog-details"><Image src={item.acf.thumb_image} fill alt="theme-pure" /></Link>
                               </div>
                               <div className="tp-blog-content">
                                  <div className="tp-blog-meta d-flex align-items-center">
                                     <div className="tp-blog-category category-color-1">
-                                       <span>{item.category}</span>
+                                       <span>{item.acf.category.name}</span>
                                     </div>
                                     <div className="tp-blog-date">
-                                       <span>{item.date}</span>
+                                       <span>{item.acf.publish_date}</span>
                                     </div>
                                  </div>
                                  <div className="tp-blog-title-box">
-                                    <Link className="tp-blog-title-sm" href="/blog-details">{item.title}</Link>
+                                    <Link className="tp-blog-title-sm" href="/blog-details">{item.acf.news_title}</Link>
                                  </div>
                                  <div className="tp-blog-author-info-box d-flex align-items-center">
                                     <div className="tp-blog-avata">
-                                       <Image src={item.avata_img} alt="theme-pure" />
+                                       {/* <Image src={item.avata_img} alt="theme-pure" /> */}
                                     </div>
                                     <div className="tp-blog-author-info">
-                                       <h5>{item.name}</h5>
-                                       <span>{item.job_title}</span>
+                                       <h5>{item.acf.publisher_name}</h5>
+                                       <span>job</span>
                                     </div>
                                  </div>
                               </div>
