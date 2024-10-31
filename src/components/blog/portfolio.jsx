@@ -18,18 +18,18 @@ const Portfolio = () => {
    const [activeCategory, setActiveCategory] = useState("All");
    const [items, setItems] = useState(fetchBlogs); 
   
-    const filterItems = (cateItem) => {
-      setActiveCategory(cateItem);
+   //  const filterItems = (cateItem) => {
+   //    setActiveCategory(cateItem);
   
-      if (cateItem === "All") {
-        return setItems(portfolio_blog);
-      } else {
-        const findItems = portfolio_blog.filter((findItem) => {
-          return findItem.category == cateItem;
-        });
-        setItems(findItems);
-      }
-    };
+   //    if (cateItem === "All") {
+   //      return setItems(portfolio_blog);
+   //    } else {
+   //      const findItems = portfolio_blog.filter((findItem) => {
+   //        return findItem.category == cateItem;
+   //      });
+   //      setItems(findItems);
+   //    }
+   //  };
 
     return (
         <>
@@ -44,7 +44,7 @@ const Portfolio = () => {
                         </div>
                      </div>
                   </div>
-                  <div className="row">
+                  {/* <div className="row">
                      <div className="col-xl-12">
                         <div className="portfolio-filter masonary-menu text-center mb-35">
                         {categories.map((cate, i) => (
@@ -58,14 +58,15 @@ const Portfolio = () => {
                         ))} 
                         </div>
                      </div>
-                  </div>
+                  </div> */}
                   <div className="row grid blog-grid-inner" ref={dataRef}>
                
                      {items.map((item, i ) => 
                         <div key={i} data-index={i} className="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat1 cat4 cat3 cat5">
                            <div className="tp-blog-item">
-                              <div className="tp-blog-thumb fix" style={{position: 'relative', width:'100%', height: '250px'}}>
-                                 <Link href="/blog-details"><Image src={item.acf.thumb_image} fill alt="theme-pure" /></Link>
+                              <div className="tp-blog-thumb fix" style={{position: 'relative', width:'100%', height: '250px', objectFit:'cover'}}>
+                                 <Link href={`/blog-kursus-coding-anak/${item.id}`}><Image src={item.acf.thumb_image} fill alt="theme-pure" /></Link>
+                                 {/* <a href="blog-kursus-coding-anak/dorrr"><Image src={item.acf.thumb_image} fill alt="theme-pure" /></a> */}
                               </div>
                               <div className="tp-blog-content">
                                  <div className="tp-blog-meta d-flex align-items-center">
@@ -77,7 +78,8 @@ const Portfolio = () => {
                                     </div>
                                  </div>
                                  <div className="tp-blog-title-box">
-                                    <Link className="tp-blog-title-sm" href="/blog-details">{item.acf.news_title}</Link>
+                                    <Link className="tp-blog-title-sm" href={`/blog-kursus-coding-anak/${item.id}`}>{item.acf.news_title}</Link>
+                                    {/* <a className="tp-blog-title-sm" href="blog-kursus-coding-anak/dorrr">{item.acf.news_title}</a> */}
                                  </div>
                                  <div className="tp-blog-author-info-box d-flex align-items-center">
                                     <div className="tp-blog-avata">

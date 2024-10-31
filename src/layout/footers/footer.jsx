@@ -16,10 +16,10 @@ import Image from 'next/image';
 // footer_content 
 const footer_content  = {
     title: <>Get Our Latest's News <br /> & Updates</>,
-    description: <>Our highly skilled development teams <br /> specialized in data analysis.</>,
-    phone: "+806(000)8899",
-    contact_mail: "contact@info.com",
-    location: "1234 North Avenue Luke Lane, South Bend,",
+    description: <>Our highly skilled development & tutor teams <br /> specialized in programming.</>,
+    phone: "+62 882-2814-9133",
+    contact_mail: "marslearningcenter@gmail.com",
+    location: "Citra Mandiri Regency H1-36, Sidoarjo",
 
     copy_right: <>Full Copyright & Design By <Link href="#">@Theme pure</Link> – {new Date().getFullYear()}</>,
 
@@ -95,7 +95,7 @@ const Footer = () => {
         <>
         <footer className="pb-50 fix">
             <div className="tp-footer__pl-pr p-relative">
-               <div className="footer-black-bg tp-gsap-bg"></div>
+               <div className="footer-black-bg tp-hero-bg tp-gsap-bg"></div>
                <div className="tp-footer__area pt-50">
                   <div className="container">
 
@@ -174,7 +174,7 @@ const Footer = () => {
                                           <span>
                                             <LocationIcon /> 
                                           </span>
-                                          <Link href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"
+                                          <Link href="https://maps.app.goo.gl/KkMk1Qir5e1Z8fGs5"
                                              target="_blank">{location}</Link>
                                        </li>
                                     </ul>

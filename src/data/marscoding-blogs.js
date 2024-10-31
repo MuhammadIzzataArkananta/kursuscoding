@@ -1,7 +1,7 @@
 const fetchBlogs = [];
 
 const getBlogs = async () => {
-    const reqUrl = 'https://gmg.co.id/apimars/wp-json/wp/v2/blogs?acf_format=standard&_fields=id,acf';
+    const reqUrl = 'https://gmg.co.id/apimars/wp-json/wp/v2/blogs?acf_format=standard&_fields=id,slug,acf';
     
     try {
         const response = await fetch(reqUrl);

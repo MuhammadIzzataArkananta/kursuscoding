@@ -7,16 +7,27 @@ import img_2 from "../../../public/assets/img/breadcrumb/breadcrumb-shape-2.png"
 import img_3 from "../../../public/assets/img/blog/blog-avata-1.png";
 
 
-const breadcrumb_content = {
-    sub_title: "Resources",
-    title: "Developing Privacy User Centric Apps",
-    author_name: "Rudra Ghosh",
-    author_info: "CEO Dulalix  •   April 24, 2022",
+// const breadcrumb_content = {
+//     sub_title: "Resources",
+//     title: "Developing Privacy User Centric Apps",
+//     author_name: "Rudra Ghosh",
+//     author_info: "CEO Dulalix  •   April 24, 2022",
 
-}
-const {sub_title, title, author_name, author_info}  = breadcrumb_content
+// }
+// const {sub_title, title, author_name, author_info}  = breadcrumb_content
 
-const BreadcrumbSix = () => {
+const BreadcrumbSix = ({content}) => {
+   if (!content) return null;
+
+   const breadcrumb_content = {
+      sub_title: content.acf.category.name,
+      title: content.acf.news_title,
+      author_name: content.acf.publisher_name,
+      author_info: content.acf.publish_date,
+  
+  }
+  const {sub_title, title, author_name, author_info}  = breadcrumb_content
+
     return (
         <>
             <div className="breadcrumb__area breadcrumb-ptb-4 p-relative blue-bg-2">
@@ -36,7 +47,7 @@ const BreadcrumbSix = () => {
                         </div>
                         <div className="tp-blog-author-info-box d-flex align-items-center">
                            <div className="tp-blog-avata">
-                              <Image src={img_3} alt="theme-pure" />
+                              <Image src={content.acf.publisher_image ? content.acf.publisher_image : img_3 } width={'50'} height={'50'} alt="theme-pure" />
                            </div>
                            <div className="tp-blog-author-info">
                               <h5>{author_name}</h5>
