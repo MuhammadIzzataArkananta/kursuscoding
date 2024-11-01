@@ -9,7 +9,7 @@ import LocationIcon from '@/svg/location-icon';
 import PhoneIcon from '@/svg/phone-icon';
 import RightArrow from '@/svg/right-arrow';
 
-import footer_logo from "../../../public/assets/img/logo/marscoding-logo.webp";
+import footer_logo from "../../../public/assets/img/logo/logoMarsCoding.webp";
 import Image from 'next/image';
 
 

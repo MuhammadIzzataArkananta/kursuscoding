@@ -95,7 +95,7 @@
         & p{
             font-weight: 400;
             font-size: 16px;
-            color: var(--tp-common-white);
+            color: var(--tp-common-black);
             line-height: 26px;
             padding-bottom: 12px;
             @media #{$lg}{
@@ -145,7 +145,7 @@
                 & a{
                     font-weight: 500;
                     font-size: 16px;                   
-                    color: rgba(245, 245, 250, 0.6);
+                    color: var(--tp-common-black);
                     transition: .3s;
                     &:hover{
                         color: var(--tp-common-white);

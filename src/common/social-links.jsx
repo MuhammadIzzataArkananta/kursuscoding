@@ -13,14 +13,9 @@ const social_links = [
     icon: "fab fa-twitter", 
   },
   {
-    link: "https://www.linkedin.com",
+    link: "http://twitter.com",
     target: "_blank",
-    icon: "fab fa-linkedin-in", 
-  }, 
-  {
-    link: "https://www.vimeo.com",
-    target: "_blank",
-    icon: "fab fa-vimeo-v", 
+    icon: "fab fa-whatsapp", 
   },
 ];
 

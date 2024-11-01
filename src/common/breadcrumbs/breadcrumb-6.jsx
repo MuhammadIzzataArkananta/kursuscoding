@@ -30,7 +30,7 @@ const BreadcrumbSix = ({content}) => {
 
     return (
         <>
-            <div className="breadcrumb__area breadcrumb-ptb-4 p-relative blue-bg-2">
+            <div className="breadcrumb__area breadcrumb-ptb-4 p-relative red-bg">
             <div className="breadcrumb__shape-1">
                <Image src={img_1} alt="theme-pure" />
             </div>
