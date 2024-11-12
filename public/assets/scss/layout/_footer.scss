@@ -72,7 +72,7 @@
             line-height: 50px;
             text-align: center;
             border-radius: 50%;
-            background-color: var(--tp-common-red);
+            background-color: var(--tp-mars-red);
             & svg{
                 color: var(--tp-common-white);
                 transform: rotate(-45deg);
@@ -80,7 +80,7 @@
                 margin-top: -2px;
             }
             &:hover{
-                box-shadow: inset 0 0 0 30px var(--tp-theme-1);
+                box-shadow: inset 0 0 0 30px var(--tp-mars-yellow);
                 background-color: transparent;
             }
         }
@@ -127,8 +127,8 @@
             transform: scale(1);
             transition: .3s;
             &:hover{
-                background-color: var(--tp-theme-1);
-                border-color: var(--tp-theme-1);
+                background-color: var(--tp-mars-red);
+                border-color: var(--tp-mars-red);
                 color: var(--tp-common-white);
                 transform: scale(1.1);
             }

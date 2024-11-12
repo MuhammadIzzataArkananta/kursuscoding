@@ -1,25 +1,37 @@
 import Link from "next/link";
 
 
-const social_links = [
-  {
-    link: "http://facebook.com",
-    target: "_blank",
-    icon: "fab fa-facebook-f", 
-  },
-  {
-    link: "http://twitter.com",
-    target: "_blank",
-    icon: "fab fa-twitter", 
-  },
-  {
-    link: "http://twitter.com",
-    target: "_blank",
-    icon: "fab fa-whatsapp", 
-  },
-];
 
-const SocialLinks = () => {
+
+
+
+const SocialLinks = ({blogId}) => {
+
+  const social_links = [
+    {
+      link: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+        `https://kursuscoding.vercel.app/blog-kursus-coding-anak/${blogId}`
+      )}`,
+      target: "_blank",
+      icon: "fab fa-facebook-f", 
+    },
+    {
+      link: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+        `https://kursuscoding.vercel.app/blog-kursus-coding-anak/${blogId}`
+      )}`,
+      target: "_blank",
+      icon: "fab fa-twitter", 
+    },
+    {
+      link: `https://api.whatsapp.com/send?text=${encodeURIComponent(
+        `https://kursuscoding.vercel.app/blog-kursus-coding-anak/${blogId}`
+      )}`,
+      target: "_blank",
+      icon: "fab fa-whatsapp",
+    },
+  ];
+
+
   return (
     <>
       {social_links.map((l, i) => (

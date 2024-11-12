@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, {useState , useEffect} from 'react';
 import { EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import fetchBlogs from '@/data/marscoding-blogs';
 
 // author img import here 
 import author_img_1 from "../../../public/assets/img/blog/blog-avata-3.png";
@@ -41,89 +42,91 @@ const setting = {
 
 const blog_grid_content = {
 
-    grid_slider_data: [
-        {
-            id: 1, 
-            bg_img: "/assets/img/blog/inner-blog-1.png",
-            child_1: "Resources",
-            date: "October 20, 2023",
-            title: <>5 Companies doing Brand <br /> Marketing Right</>,
-            des: <>From publishing content and hoping to acquire leads to <br />
-            gaining audience insights and making personalized <br />
-            content, content marketing.</>,
-            author_img: author_img_1,
-            author_name: "Hilary Ouse",
-            author_info: "Founder & CEO Dulalix",
-        } ,
-        {
-            id: 2, 
-            bg_img: "/assets/img/blog/inner-blog-2.png",
-            child_1: "Resources",
-            date: "October 12, 2023",
-            title: <>5 Companies doing Brand <br /> Marketing Right</>,
-            des: <>From publishing content and hoping to acquire leads to <br />
-            gaining audience insights and making personalized <br />
-            content, content marketing.</>,
-            author_img: author_img_2,
-            author_name: "Ouse Hilary",
-            author_info: "Founder & CEO Dulalix",
-        } ,
-        {
-            id: 3, 
-            bg_img: "/assets/img/blog/inner-blog-3.png",
-            child_1: "Resources",
-            date: "October 25, 2023",
-            title: <>5 Companies doing Brand <br /> Marketing Right</>,
-            des: <>From publishing content and hoping to acquire leads to <br />
-            gaining audience insights and making personalized <br />
-            content, content marketing.</>,
-            author_img: author_img_3,
-            author_name: "Mahful Alom",
-            author_info: "Founder & CEO Dulalix",
-        } ,
-        {
-            id: 4, 
-            bg_img: "/assets/img/blog/inner-blog-1.png",
-            child_1: "Resources",
-            date: "October 20, 2023",
-            title: <>5 Companies doing Brand <br /> Marketing Right</>,
-            des: <>From publishing content and hoping to acquire leads to <br />
-            gaining audience insights and making personalized <br />
-            content, content marketing.</>,
-            author_img: author_img_4,
-            author_name: "Hilary Ouse",
-            author_info: "Founder & CEO Dulalix",
-        } ,
-        {
-            id: 5, 
-            bg_img: "/assets/img/blog/inner-blog-2.png",
-            child_1: "Resources",
-            date: "October 12, 2023",
-            title: <>5 Companies doing Brand <br /> Marketing Right</>,
-            des: <>From publishing content and hoping to acquire leads to <br />
-            gaining audience insights and making personalized <br />
-            content, content marketing.</>,
-            author_img: author_img_5,
-            author_name: "Ouse Hilary",
-            author_info: "Founder & CEO Dulalix",
-        } ,
-        {
-            id: 6, 
-            bg_img: "/assets/img/blog/inner-blog-3.png",
-            child_1: "Resources",
-            date: "October 25, 2023",
-            title: <>5 Companies doing Brand <br /> Marketing Right</>,
-            des: <>From publishing content and hoping to acquire leads to <br />
-            gaining audience insights and making personalized <br />
-            content, content marketing.</>,
-            author_img: author_img_6,
-            author_name: "Mahful Alom",
-            author_info: "Founder & CEO Dulalix",
-        } ,
-    ]
+    // grid_slider_data: [
+    //     {
+    //         id: 1, 
+    //         bg_img: "/assets/img/blog/inner-blog-1.png",
+    //         child_1: "Resources",
+    //         date: "October 20, 2023",
+    //         title: <>5 Companies doing Brand <br /> Marketing Right</>,
+    //         des: <>From publishing content and hoping to acquire leads to <br />
+    //         gaining audience insights and making personalized <br />
+    //         content, content marketing.</>,
+    //         author_img: author_img_1,
+    //         author_name: "Hilary Ouse",
+    //         author_info: "Founder & CEO Dulalix",
+    //     } ,
+    //     {
+    //         id: 2, 
+    //         bg_img: "/assets/img/blog/inner-blog-2.png",
+    //         child_1: "Resources",
+    //         date: "October 12, 2023",
+    //         title: <>5 Companies doing Brand <br /> Marketing Right</>,
+    //         des: <>From publishing content and hoping to acquire leads to <br />
+    //         gaining audience insights and making personalized <br />
+    //         content, content marketing.</>,
+    //         author_img: author_img_2,
+    //         author_name: "Ouse Hilary",
+    //         author_info: "Founder & CEO Dulalix",
+    //     } ,
+    //     {
+    //         id: 3, 
+    //         bg_img: "/assets/img/blog/inner-blog-3.png",
+    //         child_1: "Resources",
+    //         date: "October 25, 2023",
+    //         title: <>5 Companies doing Brand <br /> Marketing Right</>,
+    //         des: <>From publishing content and hoping to acquire leads to <br />
+    //         gaining audience insights and making personalized <br />
+    //         content, content marketing.</>,
+    //         author_img: author_img_3,
+    //         author_name: "Mahful Alom",
+    //         author_info: "Founder & CEO Dulalix",
+    //     } ,
+    //     {
+    //         id: 4, 
+    //         bg_img: "/assets/img/blog/inner-blog-1.png",
+    //         child_1: "Resources",
+    //         date: "October 20, 2023",
+    //         title: <>5 Companies doing Brand <br /> Marketing Right</>,
+    //         des: <>From publishing content and hoping to acquire leads to <br />
+    //         gaining audience insights and making personalized <br />
+    //         content, content marketing.</>,
+    //         author_img: author_img_4,
+    //         author_name: "Hilary Ouse",
+    //         author_info: "Founder & CEO Dulalix",
+    //     } ,
+    //     {
+    //         id: 5, 
+    //         bg_img: "/assets/img/blog/inner-blog-2.png",
+    //         child_1: "Resources",
+    //         date: "October 12, 2023",
+    //         title: <>5 Companies doing Brand <br /> Marketing Right</>,
+    //         des: <>From publishing content and hoping to acquire leads to <br />
+    //         gaining audience insights and making personalized <br />
+    //         content, content marketing.</>,
+    //         author_img: author_img_5,
+    //         author_name: "Ouse Hilary",
+    //         author_info: "Founder & CEO Dulalix",
+    //     } ,
+    //     {
+    //         id: 6, 
+    //         bg_img: "/assets/img/blog/inner-blog-3.png",
+    //         child_1: "Resources",
+    //         date: "October 25, 2023",
+    //         title: <>5 Companies doing Brand <br /> Marketing Right</>,
+    //         des: <>From publishing content and hoping to acquire leads to <br />
+    //         gaining audience insights and making personalized <br />
+    //         content, content marketing.</>,
+    //         author_img: author_img_6,
+    //         author_name: "Mahful Alom",
+    //         author_info: "Founder & CEO Dulalix",
+    //     } ,
+    // ]
 }
-const {grid_slider_data}  = blog_grid_content
+// const {grid_slider_data}  = fetchBlogs
 const BlogGrid = () => {
+
+    const [blogs, setBlogs] = useState(fetchBlogs)
 
     const [isLoop, setIsLoop] = useState(false)
     useEffect(() => {
@@ -158,26 +161,26 @@ const BlogGrid = () => {
                             loop={isLoop}
                             modules={[Navigation, EffectFade]} 
                             className="swiper-container blog-grid-slider-active"> 
-                                {grid_slider_data.map((item, i)  => 
+                                {blogs.map((item, i)  => 
                                         <SwiperSlide key={i} className="swiper-slide"> 
                                             <div  className="blog-grid-slider blog-grid-slider-bg d-flex align-items-center blog-grid-slider-height" 
-                                                        style={{backgroundImage: `url(${item.bg_img})`}}>
+                                                        style={{backgroundImage: `url(${item.acf.thumb_image})`}}>
                                             <div className="blog-grid-slider-wrapper">
                                                 <div className="blog-grid-slider-meta">
-                                                    <span className="child-one">{item.child_1}</span>
-                                                    <span className="child-two">{item.date}</span>
+                                                    <span className="child-one">{item.acf.category.name}</span>
+                                                    <span className="child-two">{item.acf.publish_date}</span>
                                                 </div>
-                                                <div className="blog-grid-slider-title-box">
-                                                    <h4 className="blog-grid-slider-title"><Link href="/blog-details">{item.title}</Link></h4>
-                                                    <p> {item.des}</p>
+                                                <div className="blog-grid-slider-title-box w-75">
+                                                    <h4 className="blog-grid-slider-title"><Link href={`/blog-kursus-coding-anak/${item.id}`}>{item.acf.news_title}</Link></h4>
+                                                    <p> {item.acf.description}</p>
                                                 </div>
                                                 <div className="tp-blog-author-info-box blog-grid-avata-box d-flex align-items-center">
-                                                    <div className="tp-blog-avata">
-                                                        <Image src={item.author_img} alt="theme-pure" />
+                                                    <div className="tp-blog-avata" style={{position: "relative", width: "30px", height: "30px", objectFit: "cover"}}>
+                                                        <Image src={item.acf.publisher_image} fill alt="theme-pure" />
                                                     </div>
                                                     <div className="tp-blog-author-info">
-                                                        <h5>{item.author_name}</h5>
-                                                        <span>{item.author_info}</span>
+                                                        <h5>{item.acf.publisher_name}</h5>
+                                                        <span>tes</span>
                                                     </div>
                                                 </div>
                                             </div>

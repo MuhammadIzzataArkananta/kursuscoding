@@ -58,7 +58,7 @@ const BreadcrumbSix = ({content}) => {
                   </div>
                   <div className="col-xl-3 col-lg-3 col-md-3">
                      <div className="blog-details-social-box z-index-3 text-md-end text-start">
-                        <SocialLinks />  
+                        <SocialLinks blogId={content.id} />  
                      </div>
                   </div>
                </div>
