@@ -24,6 +24,7 @@ const PostboxArea = ({ style_details_2, blog }) => {
    if (!blog) return null;
 
    const [toc, setToc] = useState("")
+   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
    useEffect(() => {
       const contentElement = document.getElementById("content");
@@ -34,6 +35,7 @@ const PostboxArea = ({ style_details_2, blog }) => {
    }, [blog])
 
    function generateTOC(contentElement) {
+      
       const headings = contentElement.querySelectorAll("h1, h2, h3, h4, h5, h6");
       const tocList = [];
 
@@ -49,6 +51,7 @@ const PostboxArea = ({ style_details_2, blog }) => {
             count++;
          }
          heading.id = uniqueId
+         
 
          tocList.push(
             <li key={uniqueId} style={{ marginLeft: `${(parseInt(heading.tagName[1]) - 1) * 20}px` }}>
@@ -58,8 +61,7 @@ const PostboxArea = ({ style_details_2, blog }) => {
       })
       return <ul>{tocList}</ul>;
    }
-
-
+   
 
    return (
       <>
@@ -78,7 +80,19 @@ const PostboxArea = ({ style_details_2, blog }) => {
                            }
                            <div className="postbox__details-title-box pb-30">
                               <h1 className="postbox__details-title">{blog.acf.news_title}</h1>
-                              <div style={{border: "1px solid black"}} id='toc'>{toc}</div>
+                              <div style={{ 
+                                         fontSize: "16px",
+                                         lineHeight: "2",
+                                         color: "#8f0f0f",
+                                         backgroundColor: "#f5ebeb",
+                                         padding: "10px",
+                                         borderRadius: "5px" }}>
+                                    <button onClick={() => setIsDropdownVisible(!isDropdownVisible)}>
+                                          {isDropdownVisible ? "Sembunyikan Daftar Isi" : "Tampilkan Daftar Isi"}
+                                    </button>
+                                          {isDropdownVisible && <div className="toc">{toc}</div>}
+                              </div>
+
                               <br />
                               <div id='content' dangerouslySetInnerHTML={{ __html: blog.acf.content }}></div>
 
